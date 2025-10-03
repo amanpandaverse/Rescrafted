@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycled Jewelry - Rescrafted</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f3f4f6;
+        }
+
+        /* Background Image and Overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('img/jewelry-bg.jpg') no-repeat center center/cover;
+            filter: brightness(0.7);
+            z-index: -1;
+        }
+
+        /* Header Section */
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(0, 128, 0, 0.8);
+            color: #fff;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            flex-direction: column;
+        }
+
+        .logo {
+            position: absolute;
+            left: 20px;
+        }
+
+        .logo img {
+            height: 150px;
+        }
+
+        .header-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .subheading {
+            font-size: 1.2em;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Content Section */
+        .content {
+            margin: 200px auto 50px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            width: 80%;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .jewelry-box {
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(230, 230, 230, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .jewelry-box img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .jewelry-box h3 {
+            margin: 10px 0;
+            color: #388e3c;
+        }
+
+        .jewelry-box p {
+            margin: 10px 0;
+        }
+
+        .jewelry-box span {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .buy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 1em;
+            color: white;
+            background-color: #388e3c;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #4CAF50;
+        }
+
+        .jewelry-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <img src="img/Rescrafted-removebg-preview.png" alt="Rescrafted Logo">
+        </div>
+        <h1 class="header-title">RESCRAFTED</h1>
+        <p class="subheading">Eco-Friendly Recycled Jewelry for a Sustainable Style</p>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <!-- Recycled Jewelry Sections -->
+        <div class="jewelry-row">
+            <!-- Glass Jewelry -->
+            <div class="jewelry-box">
+                <img src="img/glass-jewelry.jpg" alt="Glass Recycled Jewelry">
+                <h3>Glass Jewelry</h3>
+                <p>Beautiful earrings and necklaces crafted from recycled glass for a touch of elegance.</p>
+                <span>Price: ₹500</span>
+                <br>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Metal Jewelry -->
+            <div class="jewelry-box">
+                <img src="img/metal-jewelry.jpg" alt="Metal Recycled Jewelry">
+                <h3>Metal Jewelry</h3>
+                <p>Unique pieces made from upcycled metals, combining durability with stunning designs.</p>
+                <span>Price: ₹700</span>
+                <br>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Plastic Jewelry -->
+            <div class="jewelry-box">
+                <img src="img/plastic-jewelry.jpg" alt="Plastic Recycled Jewelry">
+                <h3>Plastic Jewelry</h3>
+                <p>Vibrant and creative jewelry crafted from recycled plastics, perfect for casual wear.</p>
+                <span>Price: ₹300</span>
+                <br>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Mixed Media Jewelry -->
+            <div class="jewelry-box">
+                <img src="img/mixed-jewelry.jpg" alt="Mixed Media Recycled Jewelry">
+                <h3>Mixed Media Jewelry</h3>
+                <p>Artistic jewelry combining glass, metal, and plastic for a truly unique look.</p>
+                <span>Price: ₹800</span>
+                <br>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

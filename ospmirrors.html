@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decorative Mirrors - Rescrafted</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f3f4f6;
+        }
+
+        /* Background Image and Overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('img/decorative-mirrors-bg.jpg') no-repeat center center/cover;
+            filter: brightness(0.7);
+            z-index: -1;
+        }
+
+        /* Header Section */
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(0, 128, 0, 0.8);
+            color: #fff;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            flex-direction: column;
+        }
+
+        .logo {
+            position: absolute;
+            left: 20px;
+        }
+
+        .logo img {
+            height: 150px;
+        }
+
+        .header-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .subheading {
+            font-size: 1.2em;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Content Section */
+        .content {
+            margin: 200px auto 50px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            width: 80%;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .mirror-box {
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(230, 230, 230, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .mirror-box img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .mirror-box h3 {
+            margin: 10px 0;
+            color: #388e3c;
+        }
+
+        .mirror-box p {
+            margin: 10px 0;
+        }
+
+        .mirror-box span {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .buy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 1em;
+            color: white;
+            background-color: #388e3c;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #4CAF50;
+        }
+
+        .mirror-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <img src="img/Rescrafted-removebg-preview.png" alt="Rescrafted Logo">
+        </div>
+        <h1 class="header-title">RESCRAFTED</h1>
+        <p class="subheading">Sustainable Decorative Mirrors from Recycled Materials</p>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <!-- Decorative Mirrors -->
+        <div class="mirror-row">
+            <!-- Recycled Wood Mirror -->
+            <div class="mirror-box">
+                <img src="img/recycled-wood-mirror.jpg" alt="Recycled Wood Mirror">
+                <h3>Recycled Wood Mirror</h3>
+                <p>A beautifully handcrafted mirror frame made from reclaimed wood, adding a rustic touch to your space.</p>
+                <span>Price: ₹2,500</span>
+                <br>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Upcycled Glass Mirror -->
+            <div class="mirror-box">
+                <img src="img/upcycled-glass-mirror.jpg" alt="Upcycled Glass Mirror">
+                <h3>Upcycled Glass Mirror</h3>
+                <p>A stunning mirror made with upcycled glass, offering a modern yet sustainable look.</p>
+                <span>Price: ₹1,800</span>
+                <br>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

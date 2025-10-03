@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register - Rescrafted Seller</title>
+<style>
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f3f4f6;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/ai-generated-8255294.jpg') no-repeat center center/cover;
+    filter: brightness(0.7);
+    z-index: -1;
+}
+
+/* Header Section */
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 128, 0, 0.9);
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.header .logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+}
+
+.header .title-container {
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header .tagline {
+    font-size: 1em;
+    color: #d0ffd0;
+    margin-top: 5px;
+}
+
+/* Form Container */
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 95%;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 100px;
+    flex-grow: 1;
+}
+
+.container h2 {
+    color: #388e3c;
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2e7d32;
+}
+
+p {
+    margin-top: 15px;
+}
+
+p a {
+    color: #388e3c;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+.footer {
+    background-color: rgba(0, 128, 0, 0.9);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer a {
+    color: #d0ffd0;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<!-- Header Section -->
+<div class="header">
+    <img src="img/rescrafted-logo.png" alt="Rescrafted Logo" class="logo">
+    <div class="title-container">
+        <h1>Rescrafted Seller Registration</h1>
+        <p class="tagline">"Join our sustainable scrap ecosystem today!"</p>
+    </div>
+</div>
+
+<!-- Registration Form -->
+<div class="container">
+    <h2>Register as Seller</h2>
+    <form action="seller_registration_processing.php" method="POST">
+        <input type="text" name="business_name" placeholder="Business Name" required>
+        <input type="text" name="owner_name" placeholder="Owner's Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" title="Enter a 10-digit phone number" required>
+        <textarea name="business_address" placeholder="Business Address" rows="3" required></textarea>
+        <textarea name="business_description" placeholder="Brief Business Description" rows="2"></textarea>
+        <a href="2222craft_seller_details.html"> <!-- Wrap the button with a link -->
+            <button type="button">Register</button> <!-- Change button type to button -->
+        </a>
+    </form>
+    <p>Already registered? <a href="04craft_seller.html">Login here</a></p>
+</div>
+
+<!-- Footer Section -->
+<div class="footer">
+    <p>Follow us on:
+        <a href="https://facebook.com" target="_blank">Facebook</a> |
+        <a href="https://twitter.com" target="_blank">Twitter</a> |
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+    </p>
+    <p>&copy; 2024 Rescrafted. All Rights Reserved.</p>
+</div>
+</body>
+</html>

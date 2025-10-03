@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register - Scrap Buyer</title>
+<style>
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f3f4f6;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/scrap-background.jpg') no-repeat center center/cover;
+    filter: brightness(0.7);
+    z-index: -1;
+}
+
+/* Header Section */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 128, 0, 0.9);
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.header .title-container {
+    text-align: center;
+    position: relative;
+}
+
+.header .logo {
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header .tagline {
+    font-size: 1em;
+    color: #d0ffd0;
+    margin-top: 5px;
+}
+
+/* Form Container */
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 95%;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.container h2 {
+    color: #388e3c;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2e7d32;
+}
+
+p {
+    margin-top: 15px;
+}
+
+p a {
+    color: #388e3c;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 128, 0, 0.9);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer a {
+    color: #d0ffd0;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<!-- Header Section -->
+<div class="header">
+    <div class="title-container">
+        <img src="img/rescrafted-logo.png" alt="Rescrafted Logo" class="logo">
+        <h1>Scrap Buyer Registration</h1>
+        <p class="tagline">"Join us in creating sustainable solutions for scrap management."</p>
+    </div>
+</div>
+
+<!-- Registration Form -->
+<div class="container">
+    <h2>Register as Buyer</h2>
+    <form action="scrap_buyer_dashboard.html" method="POST">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <input type="password" name="password" placeholder="Create a password" required>
+        <input type="password" name="confirm_password" placeholder="Confirm your password" required>
+        <a href="02homepage.html"> <!-- Wrap the button with a link -->
+            <button type="button">login</button> <!-- Change button type to button -->
+        </a>
+    </form>
+    <p>Already have an account? <a href="03registration_scrap_buyer.html">Register here</a></p>
+</div>
+
+<!-- Footer Section -->
+<div class="footer">
+    <p>Follow us on:
+        <a href="https://facebook.com" target="_blank">Facebook</a> |
+        <a href="https://twitter.com" target="_blank">Twitter</a> |
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+    </p>
+    <p>&copy; 2024 Rescrafted. All Rights Reserved.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register - Handicraft Buyer</title>
+<style>
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f3f4f6;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/handicraft-bg.jpg') no-repeat center center/cover;
+    filter: brightness(0.7);
+    z-index: -1;
+}
+
+/* Header Section */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(139, 69, 19, 0.9);
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.header .title-container {
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header .tagline {
+    font-size: 1em;
+    color: #f5deb3;
+    margin-top: 5px;
+}
+
+/* Form Container */
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 95%;
+    max-width: 500px;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.container h2 {
+    color: #8b4513;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5e3210;
+}
+
+p {
+    margin-top: 15px;
+}
+
+p a {
+    color: #8b4513;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(139, 69, 19, 0.9);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer a {
+    position: relative;
+    color: #f5deb3;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<!-- Header Section -->
+<div class="header">
+    <div class="title-container">
+        <h1>Handicraft Buyer Registration</h1>
+        <p class="tagline">"Bringing authentic artistry to your doorstep."</p>
+    </div>
+</div>
+
+<!-- Registration Form -->
+<div class="container">
+    <h2>Register as Buyer</h2>
+    <form action="buyer_registration_processing.php" method="POST">
+        <input type="text" name="full_name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" title="Enter a 10-digit phone number" required>
+        <textarea name="delivery_address" placeholder="Delivery Address" rows="4" required></textarea>
+        <select name="preferred_delivery_time" required>
+            <option value="">Preferred Delivery Time</option>
+            <option value="Morning (9 AM - 12 PM)">Morning (9 AM - 12 PM)</option>
+            <option value="Afternoon (12 PM - 3 PM)">Afternoon (12 PM - 3 PM)</option>
+            <option value="Evening (3 PM - 6 PM)">Evening (3 PM - 6 PM)</option>
+        </select>
+        <textarea name="special_instructions" placeholder="Special Instructions (optional)" rows="3"></textarea>
+        <a href="02homepage.html"> <!-- Wrap the button with a link -->
+            <button type="button">register</button> <!-- Change button type to button -->
+        </a>
+    </form>
+    <p>Already registered? <a href="buyer_login.html">Login here</a></p>
+</div>
+
+<!-- Footer Section -->
+<div class="footer">
+    <p>Follow us on:
+        <a href="https://facebook.com" target="_blank">Facebook</a> |
+        <a href="https://twitter.com" target="_blank">Twitter</a> |
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+    </p>
+    <p>&copy; 2024 Handicraft Market. All Rights Reserved.</p>
+</div>
+</body>
+</html>

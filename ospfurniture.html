@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycled Furniture - Rescrafted</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f3f4f6;
+        }
+
+        /* Background Image and Overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('img/recycled-furniture-bg.jpg') no-repeat center center/cover;
+            filter: brightness(0.7);
+            z-index: -1;
+        }
+
+        /* Header Section */
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(0, 128, 0, 0.8);
+            color: #fff;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            flex-direction: column;
+        }
+
+        .logo {
+            position: absolute;
+            left: 20px;
+        }
+
+        .logo img {
+            height: 150px;
+        }
+
+        .header-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .subheading {
+            font-size: 1.2em;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Content Section */
+        .content {
+            margin: 200px auto 50px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            width: 80%;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .furniture-box {
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(230, 230, 230, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .furniture-box img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .furniture-box h3 {
+            margin: 10px 0;
+            color: #388e3c;
+        }
+
+        .furniture-box p {
+            margin: 10px 0;
+        }
+
+        .furniture-box span {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .buy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 1em;
+            color: white;
+            background-color: #388e3c;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #4CAF50;
+        }
+
+        .furniture-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <img src="img/Rescrafted-removebg-preview.png" alt="Rescrafted Logo">
+        </div>
+        <h1 class="header-title">RESCRAFTED</h1>
+        <p class="subheading">Sustainable Style with Recycled Furniture</p>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <!-- Furniture -->
+        <div class="furniture-row">
+            <!-- Pallet Coffee Table -->
+            <div class="furniture-box">
+                <img src="img/pallet-coffee-table.jpg" alt="Pallet Coffee Table">
+                <h3>Pallet Coffee Table</h3>
+                <p>Beautiful coffee table made from recycled pallets, adding a rustic charm to your living space.</p>
+                <span>Price: ₹2,500</span>
+                <br>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Upcycled Wooden Chair -->
+            <div class="furniture-box">
+                <img src="img/upcycled-wooden-chair.jpg" alt="Upcycled Wooden Chair">
+                <h3>Upcycled Wooden Chair</h3>
+                <p>Comfortable and sturdy chair crafted from upcycled wood.</p>
+                <span>Price: ₹1,800</span>
+                <br>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

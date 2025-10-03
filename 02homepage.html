@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rescrafted - Buy Arts, Crafts & Scrap Materials</title>
+
+<style>
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f3f4f6;
+}
+
+/* Background Image and Overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img2\ai-generated-8255294.jpg') no-repeat center center/cover;
+    filter: brightness(0.7);
+    z-index: -1;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 128, 0, 0.9);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Styling */
+.logo {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.logo img {
+    height: 80px;
+}
+
+/* Title and Tagline Styling */
+.header-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 1.2em;
+    color: #c0f2c2;
+    margin-bottom: 15px;
+}
+
+/* Buttons in Header */
+.header-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons a {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.header-buttons a:hover {
+    background-color: #388e3c;
+}
+
+/* Search Bar */
+.search-bar-container {
+    width: 100%;
+    margin-top: 140px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    display: flex;
+    width: 80%;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    background-color: #388e3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #2e7d32;
+}
+
+/* Section Titles */
+.section-title {
+    margin: 40px 0 20px;
+    font-size: 2em;
+    color: #4CAF50;
+    text-align: center;
+}
+
+/* Product Section */
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.product-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+.product-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin-top: 15px;
+    color: #388e3c;
+}
+
+.product-card p {
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-card span {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Button */
+.view-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 1em;
+    color: white;
+    background-color: #388e3c;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.view-button:hover {
+    background-color: #4CAF50;
+}
+
+/* Footer Section */
+.footer {
+    background-color: rgba(0, 128, 0, 0.8);
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #c0f2c2;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<!-- Header -->
+<div class="header">
+    <div class="logo">
+        <img src="img2/Rescrafted-removebg-preview.png" alt="Rescrafted Logo">
+    </div>
+    <h1 class="header-title">RESCRAFTED</h1>
+    <p class="tagline">Buy Arts, Crafts & Scrap Materials</p>
+    <div class="header-buttons">
+        <a href="cart.html">Cart</a>
+        <a href="03login.html">Login</a>
+
+    </div>
+</div>
+<script>
+    // Function to handle search and scroll to the matched section
+    function handleSearch() {
+        // Get the search query from the input field
+        const query = document.getElementById('search-input').value.toLowerCase();
+        
+        // Define the sections and their product names
+        const sections = document.querySelectorAll('.section-title');
+        const products = document.querySelectorAll('.product-card');
+
+        let found = false; // Flag to check if a match is found
+
+        // Loop through each section title and check if the search query matches
+        sections.forEach(section => {
+            if (section.textContent.toLowerCase().includes(query)) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                found = true; // Mark that we found a section
+            }
+        });
+
+        // Loop through each product and check if the search query matches
+        products.forEach(product => {
+            const productTitle = product.querySelector('h3').textContent.toLowerCase();
+            if (productTitle.includes(query)) {
+                product.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                found = true; // Mark that we found a product
+            }
+        });
+
+        // If no match is found, alert the user
+        if (!found) {
+            alert('No results found for "' + query + '"');
+        }
+    }
+</script>
+<!-- Search Bar -->
+<div class="search-bar-container">
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for arts, crafts, or scrap materials...">
+        <button type="button" onclick="handleSearch()">Search</button>
+    </div>
+</div>
+
+
+<!-- Arts and Crafts Section -->
+<!-- Arts and Crafts Section -->
+<h2 class="section-title">Arts & Crafts</h2>
+<div class="product-container">
+    <!-- Add Arts & Crafts Cards Here -->
+    <!-- Sample Product Cards -->
+    <div class="product-card">
+        <img src="img2\i1.jpeg" alt="Scrap Sculpture">
+        <h3>Scrap Sculpture</h3>
+        <p>Beautiful sculptures crafted from recycled metal scraps.</p>
+        <span>₹500 - ₹1500</span>
+        <a href="ospScrapSculpture.html" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="img2/i2.jpeg" alt="Recycled Jewelry">
+        <h3>Recycled Jewelry</h3>
+        <p>Elegant handmade jewelry from discarded materials.</p>
+        <span>₹200 - ₹800</span>
+        <a href="ospRecycledJewelry.html" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="img2/i3.jpeg" alt="Upcycled Painting">
+        <h3>Upcycled Painting</h3>
+        <p>Vivid artworks made using old fabrics and papers.</p>
+        <span>₹300 - ₹1200</span>
+        <a href="ospUpcycledPainting.html" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="img2/i4.jpeg" alt="Scrap Metal Lamp">
+        <h3>Scrap Metal Lamp</h3>
+        <p>Unique lamps crafted from recycled metal parts.</p>
+        <span>₹800 - ₹2500</span>
+        <a href="osplamp.html" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="img2/i5.jpeg" alt="Upcycled Bag">
+        <h3>Upcycled Bag</h3>
+        <p>Trendy bags made from discarded fabric and materials.</p>
+        <span>₹400 - ₹1000</span>
+        <a href="ospbag.html" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="img2/i6.jpeg" alt="Recycled Furniture">
+        <h3>Recycled Furniture</h3>
+        <p>Stylish furniture made from reclaimed wood and metal.</p>
+        <span>₹2000 - ₹5000</span>
+        <a href="ospfurniture.html" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="img2/i7.jpeg" alt="Eco-Friendly Home Decor">
+        <h3>Eco-Friendly Home Decor</h3>
+        <p>Decorative items crafted from sustainable materials.</p>
+        <span>₹300 - ₹1500</span>
+        <a href="osphomedecore.html" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="img2/i8.gif" alt="Recycled Toys">
+        <h3>Recycled Toys</h3>
+        <p>Creative toys made from safe, repurposed materials.</p>
+        <span>₹100 - ₹700</span>
+        <a href="osptoys.html" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="img2/i9.jpeg" alt="Wall Art">
+        <h3>Wall Art</h3>
+        <p>Stunning wall art pieces created from recycled paper.</p>
+        <span>₹500 - ₹2000</span>
+        <a href="ospwallart.html" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="img2/i10.jpeg" alt="Decorative Mirrors">
+        <h3>Decorative Mirrors</h3>
+        <p>Mirrors with unique frames made from recycled materials.</p>
+        <span>₹1000 - ₹3000</span>
+        <a href="ospmirrors.html" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="img2/i11.jpeg" alt="Upcycled Planters">
+        <h3>Upcycled Planters</h3>
+        <p>Creative planters made from old containers and wood.</p>
+        <span>₹200 - ₹800</span>
+        <a href="ospplanters.html" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="img2/i12.jpeg" alt="Recycled Key Holders">
+        <h3>Recycled Key Holders</h3>
+        <p>Handmade key holders designed from scrap materials.</p>
+        <span>₹150 - ₹500</span>
+        <a href="ospkey-holders.html" class="view-button">Buy</a>
+    </div>
+</div>
+
+
+<!-- Scrap Materials Section -->
+<h2 class="section-title">Scrap Materials</h2>
+<div class="product-container">
+    <!-- Add Scrap Materials Cards Here -->
+    <div class="product-card">
+        <img src="imgscrap/metal.jpeg" alt="Metal Scrap">
+        <h3>Metal Scrap</h3>
+        <p>Various types of metal scrap suitable for recycling.</p>
+        <span>₹15 - ₹25 per kg</span>
+        <a href="0204metal.html" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="imgscrap/paper.jpeg" alt="Paper Scrap">
+        <h3>Paper Scrap</h3>
+        <p>Old newspapers, magazines, and paper for recycling.</p>
+        <span>₹3 - ₹7 per kg</span>
+        <a href="0209paper.html" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="imgscrap/the-bottle-5128607.jpg" alt="Plastic Scrap">
+        <h3>Plastic Scrap</h3>
+        <p>Plastic bottles, containers, and other plastic items.</p>
+        <span>₹10 - ₹20 per kg</span>
+        <a href="0205plastic.html" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="imgscrap/glass.jpeg" alt="Glass Scrap">
+        <h3>Glass Scrap</h3>
+        <p>Broken glass, jars, bottles, and more.</p>
+        <span>₹8 - ₹12 per kg</span>
+        <a href="0203glass.html" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="imgscrap/motherbo.jpeg" alt="E-Waste">
+        <h3>E-Waste</h3>
+        <p>Old electronic devices for safe recycling.</p>
+        <span>₹40 - ₹60 per kg</span>
+        <a href="0201ewaste.html" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="imgscrap/fabric.jpeg" alt="Fabric Scrap">
+        <h3>Fabric Scrap</h3>
+        <p>Old clothes and fabric materials for recycling.</p>
+        <span>₹25 - ₹35 per kg</span>
+        <a href="0202fabric.html" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="imgscrap/wood.jpg" alt="Wood Scrap">
+        <h3>Wood Scrap</h3>
+        <p>Discarded wood materials for various projects.</p>
+        <span>₹20 - ₹30 per kg</span>
+        <a href="img/wood.jpg" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="imgscrap/rubber.jpg" alt="Rubber Scrap">
+        <h3>Rubber Scrap</h3>
+        <p>Recyclable rubber products and materials.</p>
+        <span>₹18 - ₹28 per kg</span>
+        <a href="rubber.html" class="view-button">Buy</a>
+    </div>
+    <div class="product-card">
+        <img src="imgscrap/construction.jpg" alt="Construction Scrap">
+        <h3>Construction Scrap</h3>
+        <p>Debris and leftovers from construction projects.</p>
+        <span>₹50 - ₹100 per kg</span>
+        <a href="construction.html" class="view-button">Buy</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>&copy; 2024 Rescrafted. All rights reserved. | <a href="terms.html">Terms of Use</a> | <a href="privacy.html">Privacy Policy</a></p>
+</div>
+</body>
+</html>
