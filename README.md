@@ -1,12 +1,12 @@
-# EcoSwap: The Online Scrap & Recycled Handicraft Marketplace
+# EcoSwap: Frontend for Scrap & Handicraft Marketplace
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/YOUR_USERNAME/YOUR_REPO?style=social)](https://github.com/YOUR_USERNAME/YOUR_REPO/stargazers)
 [![Forks](https://img.shields.io/github/forks/YOUR_USERNAME/YOUR_REPO?style=social)](https://github.com/YOUR_USERNAME/YOUR_REPO/network/members)
 
-**EcoSwap** is a green-tech platform designed to promote a circular economy by connecting individuals selling scrap materials with buyers and showcasing handicrafts made from recycled waste. Our mission is to turn waste into a valuable resource, reduce landfill, and empower local artisans.
+This repository contains the frontend code for **EcoSwap**, a green-tech platform designed to promote a circular economy. It features the user interface for connecting scrap sellers with buyers and for showcasing handicrafts made from recycled materials.
 
-> **Your trash is another's treasure.** This project transforms the way we think about waste by creating a single ecosystem for recycling, sustainability, and eco-friendly commerce.
+> **Your trash is another's treasure.** This project's interface is designed to transform the way we think about waste by creating an intuitive experience for recycling and eco-friendly commerce.
 
 ---
 
@@ -16,8 +16,6 @@
 - [✨ Core Features](#-core-features)
 - [🛠️ Built With](#️-built-with)
 - [🚀 Getting Started](#-getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
 - [🌱 Future Scope](#-future-scope)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
@@ -27,39 +25,34 @@
 
 ## 💡 About The Project
 
-In a world grappling with waste management, EcoSwap provides a practical solution. We've created an online marketplace with two primary goals:
+In a world grappling with waste management, EcoSwap provides a practical solution. This frontend project builds the user-facing side of an online marketplace with two primary goals:
 
-1.  **For Scrap:** To provide a simple, profitable way for households and businesses to sell their scrap materials (metal, plastic, paper, e-waste) directly to recycling units, artists, and industries.
+1.  **For Scrap:** To provide a simple, profitable way for households and businesses to sell their scrap materials (metal, plastic, paper, e-waste).
 2.  **For Handicrafts:** To offer a dedicated platform for local artisans and small businesses to sell beautiful, sustainable products made from recycled materials.
 
-This creates a self-sustaining loop: **Waste → Resource → Product → Market**, which has a powerful triple impact:
-* **Environmental:** Reduces landfill waste and promotes conscious recycling.
-* **Social:** Empowers local artisans and creates a new income stream.
-* **Economic:** Turns discarded materials into a valuable commodity.
+This interface is the first step in creating a self-sustaining loop: **Waste → Resource → Product → Market**.
 
 ---
 
 ## ✨ Core Features
 
-* **♻️ Scrap Buying & Selling Portal:** Users can easily list scrap with details on type and quantity. Buyers can browse listings, place bids, or buy directly.
-* **🎨 Handicrafts Marketplace:** A dedicated storefront for artisans to showcase and sell eco-friendly products like home décor, accessories, and furniture.
-* **📊 Sustainability Dashboard:** An analytics dashboard that tracks the collective impact of the community, showing metrics like total waste recycled and CO₂ emissions saved.
+* **♻️ Scrap Buying & Selling Portal:** UI for listing scrap with details on type and quantity, allowing buyers to browse and connect.
+* **🎨 Handicrafts Marketplace:** A dedicated storefront design for artisans to showcase eco-friendly products.
+* **📊 Sustainability Dashboard:** Visual components to display metrics like total waste recycled and CO₂ emissions saved.
 * **🤝 User-Friendly Interface:**
-    * Simple listing process with image uploads.
-    * Secure online payments and wallet system.
-    * Integrated chat for buyer-seller negotiation.
-    * Logistics integration for pickup and delivery.
+    * Simple and intuitive forms for listing items.
+    * Clean design for secure payments and user wallets.
+    * A layout for integrated chat and negotiation.
 
 ---
 
 ## 🛠️ Built With
 
-This project is built with a modern and scalable technology stack:
+This project's frontend is built with web fundamentals:
 
-* **Frontend:** [React.js](https://reactjs.org/) / [Next.js](https://nextjs.org/)
-* **Backend:** [Node.js](https://nodejs.org/) with [Express.js](https://expressjs.com/)
-* **Database:** [MongoDB](https://www.mongodb.com/)
-* **Payment Gateway:** [Razorpay](https://razorpay.com/) / [Stripe](https://stripe.com/)
+* **HTML5**
+* **CSS3**
+* **JavaScript (ES6+)**
 
 ---
 
@@ -67,48 +60,23 @@ This project is built with a modern and scalable technology stack:
 
 To get a local copy up and running, follow these simple steps.
 
-### Prerequisites
-
-Make sure you have Node.js and npm installed on your machine.
-* npm
-    ```sh
-    npm install npm@latest -g
-    ```
-
-### Installation
-
-1.  **Fork the repository**
-2.  **Clone the repo**
+1.  **Clone the repo**
     ```sh
     git clone [https://github.com/YOUR_USERNAME/YOUR_REPO.git](https://github.com/YOUR_USERNAME/YOUR_REPO.git)
     ```
-3.  **Install NPM packages** for both the client and server directories.
-    ```sh
-    # In the root directory
-    cd client && npm install
-    cd ../server && npm install
-    ```
-4.  **Set up environment variables**
-    Create a `.env` file in the `server` directory and add the necessary variables (e.g., `MONGO_URI`, `JWT_SECRET`, `PAYMENT_API_KEY`).
-5.  **Run the development server**
-    ```sh
-    # Run the backend server (from the /server directory)
-    npm run dev
-    
-    # Run the frontend server (from the /client directory)
-    npm start
-    ```
+2.  **Open in Browser**
+    Navigate into the cloned folder and open the `index.html` file in your web browser. That's it!
 
 ---
 
 ## 🌱 Future Scope
 
-We have a clear vision for the future of EcoSwap. Our roadmap includes:
+While this repository is frontend-only, the vision for the full project includes:
 
-* **🤖 AI-Powered Features:** Implement image recognition for automatic scrap classification and AI-based price suggestions.
-* **🌐 Strategic Partnerships:** Collaborate with NGOs, government bodies, and large-scale recycling plants to expand our impact.
-* **📱 Mobile Application:** Develop native iOS and Android apps for a seamless on-the-go experience.
-* **🏆 Eco-Points System:** Introduce a loyalty program to reward frequent users for their contributions to sustainability.
+* **🤖 AI-Powered Features:** Integrating with a backend that can perform image recognition for scrap classification.
+* **🌐 Strategic Partnerships:** Building APIs to connect with NGOs, government bodies, and recycling plants.
+* **📱 Mobile Application:** Developing native iOS and Android apps that consume the same backend services.
+* **🏆 Eco-Points System:** A loyalty program to reward users for their contributions to sustainability.
 
 ---
 
@@ -123,4 +91,3 @@ Contributions are what make the open-source community such an amazing place to l
 5.  Open a Pull Request
 
 ---
-
