@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Rescrafted</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f3f4f6;
+        }
+
+        /* Header Section */
+        header {
+            background: url('img/2.jpg') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            max-width: 800px;
+        }
+
+        /* CTA Button Styling */
+        header .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 25px;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+        }
+
+        header .cta-button:hover {
+            background: #388e3c;
+        }
+
+        /* About Section */
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 50px 20px;
+            gap: 20px;
+            justify-content: center;
+            background-color: #fff;
+            align-items: center;
+        }
+
+        .about img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .about-text {
+            max-width: 600px;
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 2em;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Handicrafts Section */
+        .handicrafts {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 50px 20px;
+            gap: 20px;
+            justify-content: center;
+            background-color: #fff;
+            align-items: center;
+        }
+
+        .handicrafts img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .handicrafts .handicraft-text {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .handicrafts h2 {
+            font-size: 2.5em;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .handicrafts p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Circular Economy Section */
+        .circular-economy {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #f9f9f9;
+            padding: 50px 20px;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circular-economy img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .circular-economy .circular-text {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .circular-economy h2 {
+            font-size: 2.5em;
+            color: #388e3c;
+            margin-bottom: 20px;
+        }
+
+        .circular-economy p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Value Proposition Section */
+        .value-proposition {
+            background-color: #2c6e2f;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .value-proposition h2 {
+            font-size: 2.5em;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .value-proposition ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .value-proposition li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        /* Boxed Sections */
+        .box-section {
+            background-color: #fff;
+            border: 2px solid #4CAF50;
+            padding: 30px 20px;
+            margin: 20px 0;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .box-section h2 {
+            font-size: 2.5em;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .box-section p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .box-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .box-section li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Social Media Icons */
+        .social-media {
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5em;
+        }
+
+        .social-media a:hover {
+            color: #388e3c;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            header p {
+                font-size: 1em;
+                padding: 0 10px;
+            }
+
+            .about, .handicrafts, .circular-economy {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .handicrafts img, .circular-economy img {
+                margin: 20px 0 0 0;
+            }
+
+            .box-section {
+                padding: 20px;
+            }
+
+            .value-proposition h2 {
+                font-size: 2em;
+            }
+
+            footer {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Rescrafted</h1>
+        <p>Revolutionizing recycling by connecting buyers, sellers, and creators in a green ecosystem.</p>
+        <a href="02homepage.html" class="cta-button">Join Rescrafted</a>
+    </header>
+
+    <!-- About Section -->
+    <div class="about">
+        <div class="about-text">
+            <h2>What is Rescrafted?</h2>
+            <p>Rescrafted is a unique online platform designed to connect individuals and businesses who are passionate about recycling. Our platform helps scrap sellers dispose of recyclable materials, buyers acquire these materials, and creators transform them into beautiful art and products. We are committed to reducing waste and making a positive impact on the environment.</p>
+        </div>
+        <img src="img/istockphoto-1411289606-612x612.jpg" alt="About Rescrafted">
+    </div>
+
+    <!-- Handicrafts Section -->
+    <div class="handicrafts">
+        <div class="handicraft-text">
+            <h2>Handicrafts Made from Recycled Scrap</h2>
+            <p>Our platform also features an online marketplace where you can find unique handicrafts made from recycled materials. These one-of-a-kind items are handcrafted with care, giving new life to materials that would otherwise go to waste. By supporting this marketplace, you're not only buying beautiful art but also contributing to the circular economy.</p>
+        </div>
+        <img src="img/handi1.jpg" alt="Handicrafts">
+    </div>
+
+    <!-- Circular Economy Section -->
+    <div class="circular-economy">
+        <img src="img/circular.jpg" alt="Circular Economy">
+        <div class="circular-text">
+            <h2>The Circular Economy of Rescrafted</h2>
+            <p>Rescrafted operates on a circular economy model, where materials are constantly reused and recycled. Our platform facilitates this cycle by bringing together scrap sellers, buyers, and creators, allowing materials to be recycled, reused, and transformed into new products, reducing waste, and promoting sustainability.</p>
+        </div>
+    </div>
+
+    <!-- How Rescrafted Works Section -->
+    <div class="box-section">
+        <h2>How Rescrafted Works</h2>
+        <p>Our platform connects three key groups: scrap sellers, buyers, and artists/creators. Here's how it works:</p>
+        <ul>
+            <li><strong>Sellers:</strong> Register as a seller to list recyclable materials like paper, metal, plastic, and glass.</li>
+            <li><strong>Buyers:</strong> Browse the available materials, buy items for personal use, or to create something new.</li>
+            <li><strong>Creators:</strong> Use recycled materials to create beautiful products and art, then sell them on our marketplace.</li>
+        </ul>
+    </div>
+
+    <!-- Who Can Join Section -->
+    <div class="box-section">
+        <h2>Who Can Join Rescrafted?</h2>
+        <p>Our platform is designed for a variety of users:</p>
+        <ul>
+            <li><strong>Scrap Sellers:</strong> Individuals or businesses who want to sell recyclable materials.</li>
+            <li><strong>Buyers:</strong> People or companies interested in purchasing scrap for reuse, crafting, or recycling.</li>
+            <li><strong>Artists and Creators:</strong> Designers, makers, and artists who transform scrap materials into new products.</li>
+        </ul>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Rescrafted | All Rights Reserved</p>
+        <div class="social-media">
+            <a href="https://facebook.com/rescrafted" target="_blank">Facebook</a>
+            <a href="https://twitter.com/rescrafted" target="_blank">Twitter</a>
+            <a href="https://instagram.com/rescrafted" target="_blank">Instagram</a>
+            <a href="https://linkedin.com/company/rescrafted" target="_blank">LinkedIn</a>
+        </div>
+    </footer>
+
+</body>
+</html>
