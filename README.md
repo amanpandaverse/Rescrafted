@@ -124,14 +124,3 @@ Contributions are what make the open-source community such an amazing place to l
 
 ---
 
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` file for more information.
-
----
-
-## 📞 Contact
-
-Your Name - [Your LinkedIn Profile](https://linkedin.com/in/your-username) - your.email@example.com
-
-Project Link: [https://github.com/YOUR_USERNAME/YOUR_REPO](https://github.com/YOUR_USERNAME/YOUR_REPO)
